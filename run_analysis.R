@@ -52,4 +52,4 @@ data_full_melt <- melt(data_full, id = c("subject", "activity"))
 data_full_mean <- dcast(data_full_melt, subject + activity ~ variable, mean)
 
 # export the tidy data to a text file
-write.table(data_full_mean, "tidy.txt")
+write.table(data_full_mean, "tidy.txt", row.names = FALSE)
